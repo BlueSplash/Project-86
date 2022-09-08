@@ -1,41 +1,45 @@
-<html><head>
-    <title>Pizzeria</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style_85.css">
-<script src="main_85.js"></script>
+<!DOCTYPE html>
+
+<head>
+<title>Student Assesment</title>
+    <link rel="stylesheet" type="text/css" href="style_86.css" />
+    <script type="text/javascript" src="main_86.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-    <div class="topnav">
-        <a class="active" href="#">Pizzeria</a>
-        <div class="topnav-right">
-         <a href="#viewblock">View Menu</a>
-         <a href="#addTopings">Add Menu</a>
-        </div>
+<center>
+<div id="content">
+    <h1>Enter Student Names and Student Scores</h1>
+    <div class="formLayout">
+        <label class = box1>Student Name:</label>
+        <input type="text" id="student_name"/><br/><br>
+
+        <label class = box2>Score:</label>
+        <input type="text" id="score"/><br/><br>
+        
+        <!--Add the code for Sort button here-->
+        <!--Name the button as 'Add Student Score' in the value field-->
+        <label>&nbsp;</label>
+        <input type="button" id="add_button" value="Add Student Score"/><br/>
     </div>
 
-    <div class="row" id="viewblock">
-        <div class="img_div"> 
-            <img class="img-responsive" src="pizza.png">
-        </div>
+    <h2>Sort Students by Name</h2>
 
-        <div class="menu_div">
-            <button id="menu_list" onclick="getmenu()">Show Menu</button>
-            <div id="display_menu" style="font-weight: bold;" ></div>
-        </div>
+<form id = "form">
+    <p><textarea id="scores" rows="5" cols="30" disabled="disabled"></textarea></p>
+</form>
 
-        <div class="menu_div" id="addTopings">
-            <input id="add_item" placeholder="RECOMMEND A PIZZA!"> <br><br>
-            <!--Add the code for button in the below button tag. --> 
-            <!-- Name the button as: Add Pizza Suggestion -->
-			<button class= "btn btn-success" onclick="add_suggestion()">Add Pizza Suggestion</button><br><br>
-        </div>
-		<!--Give the appropriate id name as display_menu -->
-        <div class="menu_div"><div id="display_menu"></div>
+    <div class="formLayout">
+        <label>Average score:</label>
+        <input type="text" id="average_score" disabled="disabled"/><br/><br>
+
+        <label>&nbsp;</label>
+        <input type="button" id="clear" value="Clear Student Scores" onclick="clear_click()"/><br/><br>
+
+        <label>&nbsp;</label> 
+        <input type="button" id="sort_button" value="Sort By Student Name"/><br/>
     </div>
-
-</body></html>
+    </center>
+</body>
+</html>
